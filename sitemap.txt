@@ -1,0 +1,7 @@
+Home (/)
+  ├─ Resources (#resources)
+  ├─ About (about.html) - To build Week 2
+  ├─ Enquire (enquire.html) - To build Week 3
+  └─ Resource Detail (resources/ishvexa-hub.html) - Week 2
+
+Flow: Home -> View Details -> Enquire
