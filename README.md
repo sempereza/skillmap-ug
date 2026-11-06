@@ -10,7 +10,7 @@ Folder Structure:
 - css/style.css: To be added Week 2
 - assets/images/: Placeholder images with alt text
 
-Comitts:
+Commits:
 - feat: add project brief and sitemap
 - feat: build semantic home page
 - docs: add asset source log and link-check
