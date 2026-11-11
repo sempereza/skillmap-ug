@@ -1,0 +1,94 @@
+/* SkillMap UG - Week 2 - wireframe1 desktop + wireframe2 mobile */
+:root {
+  --main: #0f4c3a;
+  --light: #eef5f1;
+  --bg: #f2f2f2;
+  --white: #fff;
+  --text: #222;
+  --line: #ccc;
+  --font: Arial, sans-serif;
+  --gap: 12px;
+  --padding: 20px;
+  --radius: 6px;
+  --border: 1px solid var(--line);
+  --focus: 2px solid #ff8c00;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); }
+a:focus, button:focus, input:focus { outline: var(--focus); outline-offset: 2px; }
+
+/* Desktop header - wireframe1 */
+.header {
+  background: var(--white);
+  border: var(--border);
+  padding: 12px var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.logo { font-weight: bold; text-decoration: none; color: var(--text); }
+.nav ul { list-style: none; display: flex; gap: 18px; }
+.nav a { text-decoration: none; color: var(--text); padding: 6px 8px; }
+.nav a.active { background: var(--main); color: white; border-radius: var(--radius); }
+.menu-btn { display: none; background: none; border: none; font-size: 22px; }
+
+/* Desktop layout - wireframe1 */
+.page {
+  max-width: 1440px; margin: 0 auto; padding: var(--gap);
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  grid-template-areas: "hero filters" "resources resources" "footer footer";
+  gap: var(--gap);
+}
+.hero { grid-area: hero; background: var(--white); border: var(--border); padding: var(--padding); border-radius: var(--radius); }
+.hero p { margin: 12px 0; line-height: 1.6; color: #555; }
+.filters { grid-area: filters; background: var(--white); border: var(--border); padding: var(--padding); border-radius: var(--radius); }
+.filters label { display: block; margin: 10px 0; }
+.resources { grid-area: resources; background: var(--white); border: var(--border); padding: var(--padding); border-radius: var(--radius); }
+.cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--gap); margin-top: 15px; }
+.card { border: var(--border); padding: 12px; text-align: center; border-radius: var(--radius); }
+.card img { max-width: 100%; height: auto; display: block; border: var(--border); margin-bottom: 10px; }
+.card p { margin: 10px 0; color: #555; font-size: 14px; }
+.btn { display: inline-block; border: 1px solid var(--text); padding: 7px 12px; text-decoration: none; color: var(--text); background: var(--white); border-radius: var(--radius); }
+.btn-main { background: var(--main); color: white; border-color: var(--main); }
+.footer { grid-area: footer; background: var(--white); border: var(--border); text-align: center; padding: 15px; border-radius: var(--radius); }
+
+/* Search + pills - hidden on desktop, shown on phone (wireframe2) */
+.search { display: none; }
+.pills { display: none; }
+.bottom-nav { display: none; }
+
+/* 768px - tablet */
+@media (max-width: 768px) {
+  .page { grid-template-columns: 1fr; grid-template-areas: "hero" "filters" "resources" "footer"; }
+  .cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* 360px - phone - wireframe2 */
+@media (max-width: 480px) {
+  .nav ul { display: none; } /* hide desktop nav, show hamburger like wireframe2 */
+  .menu-btn { display: block; }
+  .page { padding: 8px; }
+  .cards { grid-template-columns: 1fr; }
+  .hero, .filters, .resources { padding: 15px; }
+
+  /* show search + pills on phone */
+  .search { display: block; margin: 12px 0; }
+  .search input { width: 100%; padding: 10px; border: var(--border); border-radius: 20px; }
+  .pills { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+  .pill { padding: 6px 12px; border: var(--border); background: var(--white); border-radius: 20px; }
+  .pill.active { background: var(--main); color: white; }
+
+  /* bottom nav on phone */
+  .bottom-nav {
+    display: flex; justify-content: space-around;
+    position: sticky; bottom: 0;
+    background: var(--white); border-top: var(--border);
+    padding: 10px 0;
+  }
+  .bottom-nav a { text-decoration: none; color: var(--text); font-size: 14px; }
+  .bottom-nav a.active { color: var(--main); font-weight: bold; }
+}

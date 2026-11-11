@@ -4,52 +4,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkillMap UG - Free Youth Resources in Kampala</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav aria-label="Main Navigation">
-      <a href="/">SkillMap UG</a>
+
+  <header class="header">
+    <a href="index.html" class="logo">LOGO SkillMap UG</a>
+    <nav class="nav" aria-label="Main Navigation">
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="#resources">Resources</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="enquire.html">Enquire</a></li>
       </ul>
+      <button class="menu-btn" aria-label="Open menu">☰</button>
     </nav>
   </header>
 
-  <main>
-    <section>
+  <div class="page">
+    <section class="hero">
       <h1>Find Free Youth Resources in Kampala</h1>
-      <p>Verified trainings, hubs, and mentors for students — from Ntinda to Kololo.</p>
-      <a href="#resources">Browse All Resources</a>
+      <p>Find free places to learn, study and grow your skills in Kampala.</p>
+
+      <!-- From wireframe2 - search -->
+      <label class="search">
+        <input type="search" placeholder="Search resources...">
+      </label>
+
+      <!-- From wireframe2 - filter pills on mobile -->
+      <div class="pills">
+        <button class="pill active">All</button>
+        <button class="pill">Tech</button>
+        <button class="pill">Business</button>
+        <button class="pill">Creative</button>
+      </div>
+
+      <a href="#resources" class="btn btn-main">Button: View Resources</a>
     </section>
 
-    <section id="resources">
-      <h2>Featured Resources</h2>
-      
-      <article>
-        <img src="assets/ishvexa-placeholder.jpg" alt="Students collaborating at a tech hub in Kampala">
-        <h3>Ishvexa Hub Bootcamp</h3>
-        <p>Category: Tech and Design. Free 6-week programme.</p>
-        <a href="resources/ishvexa-hub.html">View Ishvexa Hub Details and Enquire</a>
-      </article>
+    <aside class="filters">
+      <h2>Filters</h2>
+      <label><input type="radio" name="filter" checked> (selected) All</label>
+      <label><input type="radio" name="filter"> Tech</label>
+      <label><input type="radio" name="filter"> Business</label>
+      <label><input type="radio" name="filter"> Creative</label>
+    </aside>
 
-      <article>
-        <img src="assets/design-clinic.jpg" alt="Mentor reviewing a UI design on a laptop screen">
-        <h3>Ntinda Design Clinic - Fictional Example</h3>
-        <p>Free portfolio reviews for creatives. This is a fictional example for Week 1 demo as per Ishvexa guidelines.</p>
-        <a href="resources/design-clinic.html">View Design Clinic Details</a>
-      </article>
+    <section class="resources" id="resources">
+      <h2>Resources (3)</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600" alt="Youth Coding Bootcamp">
+          <h3>Youth Coding Bootcamp</h3>
+          <p>Kampala - Tech Hub</p>
+          <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600" alt="Business Startup Workshop">
+          <h3>Business Startup Workshop</h3>
+          <p>Ntinda - Business Incubator</p>
+          <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Creative Workshop">
+          <h3>Creative Workshop</h3>
+          <p>Kampala - Creative</p>
+          <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
+        </article>
+      </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 SkillMap UG. Community project for Ishvexa Hub Internship.</p>
-    <nav aria-label="Footer">
-      <a href="about.html">About Project</a>
-      <a href="https://ishvexa.com">Ishvexa Hub Official</a>
-    </nav>
-  </footer>
+    <footer class="footer">
+      <p>Footer: © 2026 SkillMap UG - Contact - Privacy - Terms</p>
+    </footer>
+  </div>
+
+  <!-- From wireframe2 - bottom nav only shows on phone -->
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <a href="index.html" class="active">⌂ Home</a>
+    <a href="#resources">🔖 Saved</a>
+    <a href="enquire.html">👤 Profile</a>
+  </nav>
+
 </body>
 </html>
