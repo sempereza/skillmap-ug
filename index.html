@@ -8,19 +8,22 @@
 </head>
 <body>
 
-  <header class="header">
-    <a href="index.html" class="logo">LOGO SkillMap UG</a>
-    <nav class="nav" aria-label="Main Navigation">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="enquire.html">Enquire</a></li>
-      </ul>
-      <button class="menu-btn" aria-label="Open menu">☰</button>
-    </nav>
-  </header>
+  <header>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html" class="logo">Ishvexa Hub</a>
 
+    <button class="menu-btn" 
+  aria-expanded="false"
+  aria-controls="main-menu" 
+  aria-label="Open menu">☰ Menu</button>
+
+    <ul id="main-menu">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+</header>
   <div class="page">
     <section class="hero">
       <h1>Find Free Youth Resources in Kampala</h1>
@@ -54,21 +57,39 @@
       <h2>Resources (3)</h2>
       <div class="cards">
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600" alt="Youth Coding Bootcamp">
+          <img
+            src="SkillMap-UG/assets/images/workshop.(jpeg)"
+            srcset="SkillMap-UG/assets/images/workshop.(jpeg) 360w, SkillMap-UG/assets/images/workshop.(jpeg) 768w, SkillMap-UG/assets/images/workshop.(jpeg) 1440w"
+            sizes="(max-width: 480px) 360px, (max-width: 768px) 768px, 1440px"
+            width="360"
+            height="240"
+            alt="Youth Coding Bootcamp">
           <h3>Youth Coding Bootcamp</h3>
           <p>Kampala - Tech Hub</p>
           <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
         </article>
 
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600" alt="Business Startup Workshop">
+          <img
+            src="SkillMap-UG/assets/images/businessskills.jpg"
+            srcset="SkillMap-UG/assets/images/businessskills.jpg 360w, SkillMap-UG/assets/images/businessskills.jpg 768w, SkillMap-UG/assets/images/businessskills.jpg 1440w"
+            sizes="(max-width: 480px) 360px, (max-width: 768px) 768px, 1440px"
+            width="360"
+            height="240"
+            alt="Business Startup Workshop">
           <h3>Business Startup Workshop</h3>
           <p>Ntinda - Business Incubator</p>
           <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
         </article>
 
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Creative Workshop">
+          <img
+            src="SkillMap-UG/assets/images/bootcamp.jpeg"
+            srcset="SkillMap-UG/assets/images/bootcamp.jpeg 360w, SkillMap-UG/assets/images/bootcamp.jpeg 768w, SkillMap-UG/assets/images/bootcamp.jpeg 1440w"
+            sizes="(max-width: 480px) 360px, (max-width: 768px) 768px, 1440px"
+            width="360"
+            height="240"
+            alt="Creative Workshop">
           <h3>Creative Workshop</h3>
           <p>Kampala - Creative</p>
           <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
@@ -87,6 +108,8 @@
     <a href="#resources">🔖 Saved</a>
     <a href="enquire.html">👤 Profile</a>
   </nav>
+  </nav>
 
+  <script src="script.js"></script>
 </body>
 </html>

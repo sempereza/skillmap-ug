@@ -91,4 +91,26 @@ a:focus, button:focus, input:focus { outline: var(--focus); outline-offset: 2px;
   }
   .bottom-nav a { text-decoration: none; color: var(--text); font-size: 14px; }
   .bottom-nav a.active { color: var(--main); font-weight: bold; }
+}.bottom-nav a { text-decoration: none; color: var(--text); font-size: 14px; }
+.bottom-nav a.active { color: var(--main); font-weight: 700; }
+} 
+/* closes @media 480px */
+
+/* === WEEK 2 - 4. MOBILE MENU === */
+.menu-btn{display:none; border:1px solid #ccc; background:#fff; padding:8px 12px; border-radius:6px; cursor:pointer}
+
+@media (max-width:768px){
+  .nav ul{display:none}
+  .nav ul.open{display:flex; flex-direction:column; position:absolute; top:60px; right:16px; background:#fff; padding:16px; border:1px solid #ddd; border-radius:8px; z-index:20}
+  .menu-btn{display:block}
+}
+
+/* === WEEK 2 - 5. ACCESSIBILITY === */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+  outline:3px solid #ff6b35;
+  outline-offset:2px;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{animation:none !important; transition:none !important}
 }
