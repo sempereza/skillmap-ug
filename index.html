@@ -1,115 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillMap UG - Free Youth Resources in Kampala</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillMap UG - Free Youth Resources</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+    <a href="index.html" class="logo">SkillMap UG</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="main-menu">Menu</button>
+    <nav class="nav" aria-label="Main Navigation">
+      <ul id="main-menu">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enquire.html">Enquire</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <header>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="index.html" class="logo">Ishvexa Hub</a>
-
-    <button class="menu-btn" 
-  aria-expanded="false"
-  aria-controls="main-menu" 
-  aria-label="Open menu">☰ Menu</button>
-
-    <ul id="main-menu">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-    </ul>
-  </nav>
-</header>
-  <div class="page">
+<div class="page">
+  <main>
     <section class="hero">
-      <h1>Find Free Youth Resources in Kampala</h1>
-      <p>Find free places to learn, study and grow your skills in Kampala.</p>
+      <h1>Find Free Places to Learn in Uganda</h1>
+      <p>Study hubs, coding bootcamps, business workshops — for youth in Kampala, Luwero and beyond.</p>
 
-      <!-- From wireframe2 - search -->
-      <label class="search">
-        <input type="search" placeholder="Search resources...">
-      </label>
+      <input type="search" id="search-input" placeholder="Search resources... e.g. coding">
 
-      <!-- From wireframe2 - filter pills on mobile -->
       <div class="pills">
-        <button class="pill active">All</button>
-        <button class="pill">Tech</button>
-        <button class="pill">Business</button>
-        <button class="pill">Creative</button>
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="tech">Tech</button>
+        <button class="pill" data-filter="business">Business</button>
+        <button class="pill" data-filter="creative">Creative</button>
       </div>
 
-      <a href="#resources" class="btn btn-main">Button: View Resources</a>
+      <a href="#resources" class="btn btn-main">View Resources</a>
     </section>
 
     <aside class="filters">
       <h2>Filters</h2>
-      <label><input type="radio" name="filter" checked> (selected) All</label>
-      <label><input type="radio" name="filter"> Tech</label>
-      <label><input type="radio" name="filter"> Business</label>
-      <label><input type="radio" name="filter"> Creative</label>
+      <label><input type="radio" name="filter" value="all" checked> All</label>
+      <label><input type="radio" name="filter" value="tech"> Tech</label>
+      <label><input type="radio" name="filter" value="business"> Business</label>
+      <label><input type="radio" name="filter" value="creative"> Creative</label>
     </aside>
 
     <section class="resources" id="resources">
       <h2>Resources (3)</h2>
+      <p id="result-count">3 results found</p>
+      <p id="no-results" hidden>No resources found. Try another filter or clear search.</p>
+
       <div class="cards">
-        <article class="card">
-          <img
-            src="SkillMap-UG/assets/images/workshop.(jpeg)"
-            srcset="SkillMap-UG/assets/images/workshop.(jpeg) 360w, SkillMap-UG/assets/images/workshop.(jpeg) 768w, SkillMap-UG/assets/images/workshop.(jpeg) 1440w"
-            sizes="(max-width: 480px) 360px, (max-width: 768px) 768px, 1440px"
-            width="360"
-            height="240"
-            alt="Youth Coding Bootcamp">
-          <h3>Youth Coding Bootcamp</h3>
-          <p>Kampala - Tech Hub</p>
-          <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
+        <article class="card" data-category="tech">
+          <img src="assets/ishvexa.jpg" alt="ISH Vexa Hub">
+          <h3>ISH Vexa Hub</h3>
+          <p><strong>Tech</strong> • Kampala</p>
+          <p>Free coding bootcamp for beginners. Learn HTML, CSS and JavaScript.</p>
+          <a href="resources/ishvexa-hub.html" class="btn">View Details</a>
         </article>
 
-        <article class="card">
-          <img
-            src="SkillMap-UG/assets/images/businessskills.jpg"
-            srcset="SkillMap-UG/assets/images/businessskills.jpg 360w, SkillMap-UG/assets/images/businessskills.jpg 768w, SkillMap-UG/assets/images/businessskills.jpg 1440w"
-            sizes="(max-width: 480px) 360px, (max-width: 768px) 768px, 1440px"
-            width="360"
-            height="240"
-            alt="Business Startup Workshop">
-          <h3>Business Startup Workshop</h3>
-          <p>Ntinda - Business Incubator</p>
-          <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
+        <article class="card" data-category="business">
+          <img src="assets/business.jpg" alt="Business Workshop">
+          <h3>KCCA Youth Business Workshop</h3>
+          <p><strong>Business</strong> • Kampala</p>
+          <p>Free business skills workshop. Learn how to start and grow a small business.</p>
+          <a href="enquire.html" class="btn">Enquire</a>
         </article>
 
-        <article class="card">
-          <img
-            src="SkillMap-UG/assets/images/bootcamp.jpeg"
-            srcset="SkillMap-UG/assets/images/bootcamp.jpeg 360w, SkillMap-UG/assets/images/bootcamp.jpeg 768w, SkillMap-UG/assets/images/bootcamp.jpeg 1440w"
-            sizes="(max-width: 480px) 360px, (max-width: 768px) 768px, 1440px"
-            width="360"
-            height="240"
-            alt="Creative Workshop">
-          <h3>Creative Workshop</h3>
-          <p>Kampala - Creative</p>
-          <a href="resources/ishvexa-hub.html" class="btn">Button: View Details</a>
+        <article class="card" data-category="creative">
+          <img src="assets/creative.jpg" alt="Creative Hub">
+          <h3>Bamunanika Creative Space</h3>
+          <p><strong>Creative</strong> • Luwero</p>
+          <p>Free creative space for design, photography and content creation.</p>
+          <a href="enquire.html" class="btn">Enquire</a>
         </article>
       </div>
     </section>
+  </main>
 
-    <footer class="footer">
-      <p>Footer: © 2026 SkillMap UG - Contact - Privacy - Terms</p>
-    </footer>
-  </div>
+  <footer>
+    <p>© 2026 SkillMap UG • Built for youth in Uganda</p>
+  </footer>
 
-  <!-- From wireframe2 - bottom nav only shows on phone -->
-  <nav class="bottom-nav" aria-label="Mobile navigation">
-    <a href="index.html" class="active">⌂ Home</a>
-    <a href="#resources">🔖 Saved</a>
-    <a href="enquire.html">👤 Profile</a>
-  </nav>
-  </nav>
-
-  <script src="script.js"></script>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
