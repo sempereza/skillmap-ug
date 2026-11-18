@@ -7,25 +7,26 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
+<div class="page">
+
+  <header>
     <a href="index.html" class="logo">SkillMap UG</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="main-menu">Menu</button>
-    <nav class="nav" aria-label="Main Navigation">
+    <nav>
       <ul id="main-menu">
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="index.html#resources">Resources</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="enquire.html">Enquire</a></li>
       </ul>
     </nav>
   </header>
 
-<div class="page">
   <main>
     <section class="hero">
       <h1>Find Free Places to Learn in Uganda</h1>
       <p>Study hubs, coding bootcamps, business workshops — for youth in Kampala, Luwero and beyond.</p>
 
+      <label for="search-input" class="visually-hidden">Search resources</label>
       <input type="search" id="search-input" placeholder="Search resources... e.g. coding">
 
       <div class="pills">
@@ -47,34 +48,12 @@
     </aside>
 
     <section class="resources" id="resources">
-      <h2>Resources (3)</h2>
-      <p id="result-count">3 results found</p>
+      <h2>Resources</h2>
+      <p id="result-count" aria-live="polite">3 results found</p>
       <p id="no-results" hidden>No resources found. Try another filter or clear search.</p>
 
       <div class="cards">
-        <article class="card" data-category="tech">
-          <img src="assets/ishvexa.jpg" alt="ISH Vexa Hub">
-          <h3>ISH Vexa Hub</h3>
-          <p><strong>Tech</strong> • Kampala</p>
-          <p>Free coding bootcamp for beginners. Learn HTML, CSS and JavaScript.</p>
-          <a href="resources/ishvexa-hub.html" class="btn">View Details</a>
-        </article>
-
-        <article class="card" data-category="business">
-          <img src="assets/business.jpg" alt="Business Workshop">
-          <h3>KCCA Youth Business Workshop</h3>
-          <p><strong>Business</strong> • Kampala</p>
-          <p>Free business skills workshop. Learn how to start and grow a small business.</p>
-          <a href="enquire.html" class="btn">Enquire</a>
-        </article>
-
-        <article class="card" data-category="creative">
-          <img src="assets/creative.jpg" alt="Creative Hub">
-          <h3>Bamunanika Creative Space</h3>
-          <p><strong>Creative</strong> • Luwero</p>
-          <p>Free creative space for design, photography and content creation.</p>
-          <a href="enquire.html" class="btn">Enquire</a>
-        </article>
+        <!-- Cards are rendered by script.js from sample data -->
       </div>
     </section>
   </main>
