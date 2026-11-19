@@ -4,17 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SkillMap UG - Free Youth Resources</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-wireframe.css">
+<link rel="stylesheet" href="background-slideshow.css">
 </head>
 <body>
+<div class="background-slideshow" aria-hidden="true">
+  <div class="background-slide"></div>
+  <div class="background-slide"></div>
+  <div class="background-slide"></div>
+</div>
 <div class="page">
 
   <header>
-    <a href="index.html" class="logo">SkillMap UG</a>
+    <a href="index.html" class="logo"><img src="assets/skillmaplogo.jpg" alt=""><span>SkillMap UG</span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="main-menu">Menu</button>
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="enquire.html">Enquire</a></li>
       </ul>
@@ -26,8 +33,12 @@
       <h1>Find Free Places to Learn in Uganda</h1>
       <p>Study hubs, coding bootcamps, business workshops — for youth in Kampala, Luwero and beyond.</p>
 
-      <label for="search-input" class="visually-hidden">Search resources</label>
-      <input type="search" id="search-input" placeholder="Search resources... e.g. coding">
+      <form class="search-box" role="search" id="resource-search">
+        <label for="search-input" class="visually-hidden">Search resources</label>
+        <input type="search" id="search-input" placeholder="Search resources... e.g. coding" autocomplete="off" aria-describedby="search-hint">
+        <button type="submit" class="search-submit">Search</button>
+      </form>
+      <p id="search-hint" class="visually-hidden">Search by name, category, location or description.</p>
 
       <div class="pills">
         <button class="pill active" data-filter="all">All</button>

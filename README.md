@@ -90,4 +90,107 @@ Responsive images: All images use `max-width: 100%; height: auto;` so they never
 ## How to Run
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 800
+## WEEK 3 PROGRESS
+
+### What I Built This Week
+
+**1. Main Interaction: Search + Filter**
+- Search input filters resources by title, description, location and category
+- Pill filters: All / Tech / Business / Creative
+- Radio filters: Same options, synced with pills
+- Live result count: "3 results found" / "1 results found" / "0 results found"
+
+**2. Data Separate From Display**
+- All resources stored in one `resources` array in `script.js` (fictional / public sample data)
+- One `renderCards()` function builds the HTML from that data
+- No hard-coded cards in `index.html` anymore
+
+**3. States Handled**
+- **Initial:** All 3 resources shown on load
+- **Successful:** e.g. search `coding` → 1 result
+- **Empty:** e.g. search `zzzz` → 0 results + "No resources found. Try another filter..."
+- **Error:** If data fails to load → "Could not load resources. Please refresh."
+- **Loading / Retry:** Not needed — data is local sample data, no fetch / API call. If this used a real API, loading + retry would be added.
+
+**4. Enquire Form Demo**
+- Validates Name (required) and Email (must contain `@`)
+- **Preserves entries on error** — form is NOT cleared if validation fails
+- Result announced accessibly with `aria-live="polite"`
+- Clearly states: **"Demo only: This form does not send a real application or enquiry."**
+
+### Sample Data
+
+| Resource | Category | Location |
+|---|---|---|
+| ISH Vexa Hub | Tech | Kampala |
+| KCCA Youth Business Workshop | Business | Kampala |
+| Bamunanika Creative Space | Creative | Luwero |
+
+---
+
+## How To Run
+
+1. Clone: `git clone https://github.com/sempereza/skillmap-ug.git`
+2. Open `index.html` in browser or use VS Code Live Server
+3. Try search + filters
+4. Go to Enquire page to test form validation
+
+---
+
+## Manual Testing — Week 3
+
+Run in browser, no tools needed.
+
+| ID | Case | Steps | Expected | Actual |
+|---|---|---|---|---|
+| TC1 | Search normal | Type `coding` | 1 result - ISH Vexa Hub | PASS |
+| TC2 | Pill filter | Click `Business` pill | 1 result, radio syncs | PASS |
+| TC3 | Radio filter | Click `Creative` radio | 1 result, pill syncs | PASS |
+| TC4 | Blank search | Type then clear search | All 3 return | PASS |
+| TC5 | No results | Type `zzzz` | 0 results + No results message | PASS |
+| TC6 | Search + Filter combo | Tech filter + type `business` | 0 results | PASS |
+| TC7 | Invalid email | Name=`Sempereza`, Email=`bademail`, Submit | Error, entries preserved | PASS |
+| TC8 | Blank form | Leave blank, Submit | Error, focus on Name | PASS |
+| TC9 | Keyboard: Tab + Enter | Tab to search, type, Tab to pill, Enter | Works without mouse | PASS |
+| TC10 | Keyboard: Escape | Open Menu, press `Esc` | Menu closes, focus returns to Menu button | PASS |
+
+### Defects Found & Fixed
+
+1. **Search input hidden behind button** → Fixed with full-width CSS for `#search-input`
+2. **Pills and radios out of sync** → Fixed with single `setFilter()` function that updates both
+3. **Form cleared on error** → Fixed to preserve entries, only `form.reset()` on success
+
+**Re-run:** After fixes, re-ran TC2, TC3, TC7 — all PASS.
+
+---
+
+## Accessibility
+
+- Semantic HTML: `header`, `main`, `section`, `nav`, `footer`
+- Labels for all inputs, `aria-live="polite"` for result count + form message
+- Keyboard: Tab, Enter, Esc all work
+- Alt text on all images
+
+---
+
+## LinkedIn Progress
+
+**Wednesday:** Posted in-progress demo screenshot + bug (search hidden, filters out of sync, form clearing on error)
+
+---
+
+## Remaining Limitation
+
+Data is still local sample data, not a real API. No loading / retry state yet. Next step: fetch from API + add loading spinner + retry button.
+
+---
+
+## Tech Stack
+
+- HTML, CSS, JavaScript (no framework)
+- Git + GitHub Pages
+
+## Author
+
+Sempereza — SkillMap UG, built for youth in Uganda.

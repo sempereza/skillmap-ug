@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Serve SkillMap locally",
+            "type": "process",
+            "command": "python3",
+            "args": [
+                "-u",
+                "-m",
+                "http.server",
+                "8080",
+                "--bind",
+                "127.0.0.1"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": ".*"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "Serving HTTP on .* port 8080"
+                }
+            }
+        }
+    ]
+}

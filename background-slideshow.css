@@ -1,0 +1,56 @@
+body {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--bg, #f3f4f6);
+  background-image: none;
+}
+
+.background-slideshow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.background-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  animation: skillmap-background-fade 18s ease-in-out infinite;
+}
+
+.background-slide::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(4, 26, 20, 0.24), rgba(4, 26, 20, 0.34));
+}
+
+.background-slide:nth-child(1) {
+  background-image: url("assets/background.jpg");
+  animation-delay: 0s;
+}
+
+.background-slide:nth-child(2) {
+  background-image: url("assets/background2.jpg");
+  animation-delay: 6s;
+}
+
+.background-slide:nth-child(3) {
+  background-image: url("assets/background3.jpeg");
+  animation-delay: 12s;
+}
+
+@keyframes skillmap-background-fade {
+  0%, 30% { opacity: 1; }
+  38%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-slide { animation: none; opacity: 0; }
+  .background-slide:first-child { opacity: 1; }
+}
