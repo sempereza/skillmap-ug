@@ -226,3 +226,6 @@ if (form) {
   });
 }
 loadResources();
+if (noResultsEl) noResultsEl.hidden = true;
+if (statusEl) statusEl.textContent = ""; // clear loading
+renderCards(resources);
