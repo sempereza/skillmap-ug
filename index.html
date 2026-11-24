@@ -60,10 +60,12 @@
 
     <section class="resources" id="resources">
       <h2>Resources</h2>
-      <p id="result-count" aria-live="polite">3 results found</p>
+      <div id="status" aria-live="polite"></div>
+      <p id="result-count" aria-live="polite">3 res
       <p id="no-results" hidden>No resources found. Try another filter or clear search.</p>
-
-      <div class="cards">
+<button id="retry-btn" hidden>Retry</button>
+  
+<div class="cards" id="cards"></div>
         <!-- Cards are rendered by script.js from sample data -->
       </div>
     </section>

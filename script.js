@@ -4,38 +4,55 @@
 // ============================================
 
 // --- 1. DATA ONLY (fictional / public sample data) ---
-const resources = [
-  {
-    title: "ISH Vexa Hub",
-    category: "tech",
-    location: "Kampala",
-    desc: "Free coding bootcamp for beginners. Learn HTML, CSS and JavaScript.",
-    link: "resources/ishvexa-hub.html",
-    linkText: "View Details",
-    image: "assets/ishvexa.jpg",
-    alt: "ISH Vexa Hub"
-  },
-  {
-    title: "KCCA Youth Business Workshop",
-    category: "business",
-    location: "Kampala",
-    desc: "Free business skills workshop. Learn how to start and grow a small business.",
-    link: "enquire.html",
-    linkText: "Enquire",
-    image: "assets/business.jpg",
-    alt: "Business Workshop"
-  },
-  {
-    title: "Bamunanika Creative Space",
-    category: "creative",
-    location: "Luwero",
-    desc: "Free creative space for design, photography and content creation.",
-    link: "enquire.html",
-    linkText: "Enquire",
-    image: "assets/creative.jpg",
-    alt: "Creative Hub"
+// WEEK 4 - Data comes from resources.json, not hard-coded
+let resources = [];
+
+const statusEl = document.getElementById('status');
+const cardsEl = document.getElementById('cards');
+const retryBtn = document.getElementById('retry-btn');
+const resultCountEl = document.getElementById('result-count');
+const noResultsEl = document.getElementById('no-results');
+
+async function loadResources() {
+  if (statusEl) statusEl.textContent = "Loading resources...";
+  if (retryBtn) retryBtn.hidden = true;
+
+  try {
+    const res = await fetch('resources.json');
+    if (!res.ok) throw new Error('Failed to load');
+    const data = await res.json();
+
+    // Validate + handle missing fields - don't crash
+    resources = data.filter(r => r && r.id && r.title).map(r => ({
+      id: r.id,
+      title: r.title || "Untitled",
+      category: r.category || "general",
+      location: r.location || "Location not listed",
+      desc: r.desc || r.description || "No description available.",
+      link: r.link || "enquire.html",
+      linkText: r.linkText || "Enquire",
+      image: r.image || "assets/placeholder.jpg",
+      alt: r.alt || r.title || "Resource image"
+    }));
+
+    if (resources.length === 0) {
+      if (statusEl) statusEl.textContent = "";
+      if (noResultsEl) noResultsEl.hidden = false;
+      if (resultCountEl) resultCountEl.textContent = "0 results found";
+      if (cardsEl) cardsEl.innerHTML = "";
+      return;
+    }
+
+    if (noResultsEl) noResultsEl.hidden = true;
+    renderCards(resources);
+
+  } catch (err) {
+    if (statusEl) statusEl.textContent = "Could not load resources. Please check your connection.";
+    if (retryBtn) retryBtn.hidden = false;
   }
-];
+}
+
+if (retryBtn) retryBtn.addEventListener('click', loadResources);
 
 // --- 2. MENU (Week 2) ---
 const menuBtn = document.querySelector(".menu-btn");
@@ -208,3 +225,4 @@ if (form) {
     form.reset();
   });
 }
+loadResources();
