@@ -1,8 +1,8 @@
 [
-  { "id": "ish-001", "title": "ISH Vexa Hub", "category": "Tech", "location": "Kampala", "description": "Coding and study space for youth.", "type": "Hub" },
-  { "id": "kcca-002", "title": "KCCA Youth Business Workshop", "category": "Business", "location": "Kampala", "description": "Free business skills workshop.", "type": "Workshop" },
-  { "id": "bam-003", "title": "Bamunanika Creative Space", "category": "Creative", "location": "Luwero", "description": "Art and design space.", "type": "Space" },
+  { "id": "ish-001", "title": "ISH Vexa Hub", "category": "Tech", "location": "Kampala", "description": "Coding and study space for youth.", "type": "Hub", "image": "assets/ishvexa.jpg", "alt": "ISH Vexa Hub" },
+  { "id": "kcca-002", "title": "KCCA Youth Business Workshop", "category": "Business", "location": "Kampala", "description": "Free business skills workshop.", "type": "Workshop", "image": "assets/business.jpg", "alt": "KCCA Youth Business Workshop" },
+  { "id": "bam-003", "title": "Bamunanika Creative Space", "category": "Creative", "location": "Luwero", "description": "Art and design space.", "type": "Space", "image": "assets/creative.jpg", "alt": "Bamunanika Creative Space" },
   { "id": "mak-004", "title": "Makerere Coding Club", "category": "Tech", "location": "Kampala", "description": "Weekly coding meetup.", "type": "Club", "image": "assets/makerere.jpg", "alt": "Makerere Coding Club" },
-  { "id": "youth-005", "title": "Youth Finance Basics", "category": "Business", "location": "Kampala", "description": "Learn budgeting and saving.", "type": "Workshop" },
+  { "id": "youth-005", "title": "Youth Finance Basics", "category": "Business", "location": "Kampala", "description": "Learn budgeting and saving.", "type": "Workshop", "image": "assets/hall.jpg", "alt": "Youth Finance Basics workshop hall" },
   { "id": "art-006", "title": "Kampala Art Collective", "category": "Creative", "location": "Kampala", "description": "Painting and photography.", "type": "Collective", "image": "assets/art collective.jpg", "alt": "Kampala Art Collective" }
 ]

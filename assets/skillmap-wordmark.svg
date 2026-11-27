@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="150" viewBox="0 0 520 150" role="img" aria-labelledby="title description">
+  <title id="title">SkillMap UG</title>
+  <desc id="description">A Ugandan crane beside the SkillMap UG wordmark</desc>
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2d7a57"/>
+      <stop offset="1" stop-color="#0f4c3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- pictorial crane emblem -->
+  <circle cx="70" cy="75" r="58" fill="#f7f3df" stroke="#f4b942" stroke-width="5"/>
+  <path d="M48 71c9-24 31-35 51-27 18 7 27 25 24 43-3 20-20 35-40 36-20 1-38-12-43-31-3-10-2-18 8-21z" fill="#1e1e22"/>
+  <path d="M59 44c11-14 31-17 43-7 9 8 13 20 10 32-12-2-24-10-31-20-7 9-15 16-29 19 0-9 2-17 7-24z" fill="#fff"/>
+  <path d="M50 62l-27 10 27 4z" fill="#ef5b36"/>
+  <circle cx="87" cy="51" r="5" fill="#fff"/>
+  <circle cx="89" cy="51" r="2" fill="#111"/>
+  <path d="M67 83c14 2 24 11 29 25-13 1-25-4-33-13z" fill="#e23b32"/>
+  <path d="M96 77c20-12 39-9 53 5-18 2-34 11-48 28z" fill="#4a4a50"/>
+  <path d="M84 107c18-7 37-3 48 10-17 4-33 12-49 24z" fill="#303035"/>
+  <path d="M55 102c17 13 35 21 55 24-15 12-38 12-56 3z" fill="#303035"/>
+
+  <!-- integrated wordmark -->
+  <text x="142" y="81" fill="url(#green)" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" letter-spacing="-3">SkillMap</text>
+  <text x="145" y="120" fill="#f4b942" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" letter-spacing="9">UGANDA</text>
+  <path d="M142 126h304" fill="none" stroke="#f4b942" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="456" cy="126" r="5" fill="#0f4c3a"/>
+</svg>

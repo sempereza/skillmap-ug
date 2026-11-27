@@ -44,18 +44,22 @@ img { max-width: 100%; height: auto; display: block; }
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   text-decoration: none;
   font-weight: 700;
   color: var(--white);
   letter-spacing: 0.02em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
 }
-.logo span { font-size: 1.05rem; }
+.logo span { font-size: 1.35rem; }
 .logo img {
-  width: 38px;
-  height: 48px;
+  width: 300px;
+  height: 86px;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 0;
+  box-shadow: none;
 }
 .nav ul {
   list-style: none;
@@ -365,11 +369,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -473,11 +477,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -581,11 +585,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -689,11 +693,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -797,11 +801,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -905,11 +909,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1013,11 +1017,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1121,11 +1125,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1229,11 +1233,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1337,11 +1341,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1445,11 +1449,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1553,11 +1557,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1661,11 +1665,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1769,11 +1773,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1877,11 +1881,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
@@ -1985,11 +1989,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position: absolute;
   right: 16px;
   top: 27px;
+  transform: translateY(-50%);
   min-width: 27px;
   height: 27px;
   display: grid;
   place-items: center;
-  transform: translateY(-50%);
   border: 1px solid #d7dfdb;
   border-bottom-width: 3px;
   border-radius: 7px;
